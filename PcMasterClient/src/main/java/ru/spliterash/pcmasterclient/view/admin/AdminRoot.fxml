@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ru.spliterash.pcmasterclient.view.admin.AdminRootController">
+    <children>
+        <AnchorPane maxWidth="-Infinity" minWidth="150.0" prefWidth="200.0">
+            <children>
+                <VBox layoutX="50.0" layoutY="83.0" prefHeight="500.0" prefWidth="200.0" styleClass="toolbar_box"
+                      AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                      AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#onToolBarButton" styleClass="toolbar_button"
+                                text="Поставщики">
+                            <properties type="supplier"/>
+                            <graphic>
+                                <FontAwesomeIconView glyphName="INDUSTRY" size="25"/>
+                            </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#onToolBarButton" styleClass="toolbar_button"
+                                text="Категории">
+                            <properties type="componentType"/>
+                            <graphic>
+                                <FontAwesomeIconView glyphName="LIST" size="25"/>
+                            </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#onToolBarButton" styleClass="toolbar_button"
+                                text="Товары">
+                            <properties type="component"/>
+                            <graphic>
+                                <FontAwesomeIconView glyphName="DROPBOX" size="25"/>
+                            </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#onToolBarButton" styleClass="toolbar_button"
+                                text="Заказы">
+                            <properties type="order"/>
+                            <graphic>
+                                <FontAwesomeIconView glyphName="SHOPPING_CART" size="25"/>
+                            </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#onToolBarButton" styleClass="toolbar_button"
+                                text="Отчёты">
+                            <properties type="report"/>
+                            <graphic>
+                                <FontAwesomeIconView glyphName="FILE" size="25"/>
+                            </graphic>
+                        </Button>
+                        <Button onAction="#exit" mnemonicParsing="false" styleClass="toolbar_button"
+                                text="Выход">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="SIGN_OUT" size="25"/>
+                            </graphic>
+                        </Button>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="content" HBox.hgrow="ALWAYS">
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutY="31.0" style="-fx-font-size: 25;"
+                       text="Добро пожаловать в админ панель" textAlignment="CENTER" AnchorPane.leftAnchor="0.0"
+                       AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="15.0"/>
+                <VBox layoutX="7.0" layoutY="111.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.leftAnchor="15.0"
+                      AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="111.0">
+                    <children>
+                        <Label style="-fx-font-size: 25;" text="Здесь вы можете:" textAlignment="CENTER"/>
+                        <Label style="-fx-font-size: 15;" text="•Добавить/Удалить/Изменить поставщиков"
+                               textAlignment="CENTER"/>
+                        <Label style="-fx-font-size: 15;" text="•Добавить/Удалить/Изменить категории"
+                               textAlignment="CENTER"/>
+                        <Label style="-fx-font-size: 15;" text="•Добавить/Удалить/Изменить товары"
+                               textAlignment="CENTER"/>
+                        <Label style="-fx-font-size: 15;" text="•Посмотреть заказы пользователей"
+                               textAlignment="CENTER"/>
+                        <Label style="-fx-font-size: 15;" text="•Сгенерировать необходимые отчёты"
+                               textAlignment="CENTER"/>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </children>
+    <stylesheets>
+        <URL value="@../global.css"/>
+        <URL value="@../authed.css"/>
+
+    </stylesheets>
+</HBox>

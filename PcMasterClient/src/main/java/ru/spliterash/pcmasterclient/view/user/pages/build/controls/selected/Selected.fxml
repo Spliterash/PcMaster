@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="175.0"
+         prefWidth="175.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.171"
+         fx:controller="ru.spliterash.pcmasterclient.view.user.pages.build.controls.selected.Selected"
+         xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <StackPane AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <ImageView fx:id="componentPhoto" fitHeight="110.0" fitWidth="175.0" nodeOrientation="INHERIT"
+                           pickOnBounds="true" preserveRatio="true">
+                    <styleClass>
+                        <String fx:value="image-view"/>
+                    </styleClass>
+                </ImageView>
+            </children>
+        </StackPane>
+        <Label fx:id="name" alignment="CENTER" layoutX="10.0" layoutY="111.0" style="-fx-font-size: 15;"
+               text="Длинное название длинное название" wrapText="true" AnchorPane.leftAnchor="10.0"
+               AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="111.0"/>
+        <Label fx:id="price" alignment="TOP_LEFT" layoutX="10.0" layoutY="153.0" style="-fx-text-fill: #F47E01;"
+               text="Цена: 9999 руб." AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"
+               AnchorPane.topAnchor="153.0"/>
+
+
+        <StackPane prefHeight="33.0" prefWidth="70.0" style="-fx-border-radius: 25; -fx-background-radius: 0 0 0 25;"
+                   styleClass="bg-secondary" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <ImageView fx:id="supplierLogo" fitWidth="50.0" nodeOrientation="INHERIT" pickOnBounds="true"
+                           preserveRatio="true"/>
+            </children>
+        </StackPane>
+
+    </children>
+</fx:root>

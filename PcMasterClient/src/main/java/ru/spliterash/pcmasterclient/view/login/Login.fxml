@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.TextFlow?>
+
+<?import javafx.scene.layout.Region?>
+<HBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0"
+      styleClass="background" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ru.spliterash.pcmasterclient.view.login.LoginController">
+    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity">
+        <VBox alignment="TOP_CENTER" layoutX="100.0" layoutY="125.0" maxWidth="-Infinity" prefWidth="300.0"
+              AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"
+              AnchorPane.topAnchor="0.0">
+            <Label style="-fx-font-size: 3em;" text="Вход">
+                <VBox.margin>
+                    <Insets/>
+                </VBox.margin>
+            </Label>
+            <Label text="Здесь вы можете войти в систему">
+                <VBox.margin>
+                    <Insets bottom="15.0"/>
+                </VBox.margin>
+            </Label>
+            <TextField fx:id="lLogin" maxWidth="-Infinity" minHeight="-Infinity" prefWidth="99999.0" promptText="Логин">
+            </TextField>
+            <TextFlow fx:id="lLoginHelp">
+                <VBox.margin>
+                    <Insets bottom="15.0"/>
+                </VBox.margin>
+            </TextFlow>
+            <PasswordField fx:id="lPassword" maxWidth="-Infinity" minHeight="-Infinity" prefWidth="99999.0"
+                           promptText="Пароль">
+            </PasswordField>
+            <TextFlow fx:id="lPasswordHelp">
+                <VBox.margin>
+                    <Insets bottom="15.0"/>
+                </VBox.margin>
+            </TextFlow>
+            <Button fx:id="loginButton" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity"
+                    mnemonicParsing="false" onAction="#onLogin" text="Войти">
+                <VBox.margin>
+                    <Insets bottom="15.0"/>
+                </VBox.margin>
+            </Button>
+        </VBox>
+        <styleClass>
+            <String fx:value="block"/>
+            <String fx:value="bg-gradient"/>
+        </styleClass>
+    </AnchorPane>
+    <Region maxHeight="-Infinity" maxWidth="-Infinity" minWidth="25.0" prefWidth="150.0"/>
+    <AnchorPane layoutX="335.0" layoutY="85.0" maxHeight="-Infinity" maxWidth="-Infinity">
+        <VBox alignment="TOP_CENTER" layoutX="100.0" layoutY="125.0" maxWidth="-Infinity" prefWidth="300.0"
+              AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"
+              AnchorPane.topAnchor="0.0">
+            <Label style="-fx-font-size: 3em;" text="Регистрация">
+                <VBox.margin>
+                    <Insets/>
+                </VBox.margin>
+            </Label>
+            <Label text="Здесь вы можете зарегистрироваться">
+                <VBox.margin>
+                    <Insets bottom="15.0"/>
+                </VBox.margin>
+            </Label>
+            <TextField fx:id="rLogin" maxWidth="-Infinity" minHeight="-Infinity" prefWidth="99999.0" promptText="Логин">
+                <opaqueInsets>
+                    <Insets/>
+                </opaqueInsets>
+            </TextField>
+            <TextFlow fx:id="rLoginHelp">
+                <VBox.margin>
+                    <Insets bottom="15.0"/>
+                </VBox.margin>
+            </TextFlow>
+            <PasswordField fx:id="rPassword" maxWidth="-Infinity" minHeight="-Infinity" prefWidth="99999.0"
+                           promptText="Пароль">
+                <opaqueInsets>
+                    <Insets/>
+                </opaqueInsets>
+                <VBox.margin>
+                    <Insets/>
+                </VBox.margin>
+            </PasswordField>
+            <TextFlow fx:id="rPasswordHelp">
+                <VBox.margin>
+                    <Insets bottom="15.0"/>
+                </VBox.margin>
+            </TextFlow>
+            <TextField fx:id="rLastName" maxWidth="-Infinity" minHeight="-Infinity" prefWidth="99999.0"
+                       promptText="Фамилия">
+                <opaqueInsets>
+                    <Insets/>
+                </opaqueInsets>
+                <VBox.margin>
+                    <Insets/>
+                </VBox.margin>
+            </TextField>
+            <TextFlow fx:id="rLastNameHelp">
+                <VBox.margin>
+                    <Insets bottom="15.0"/>
+                </VBox.margin>
+            </TextFlow>
+            <TextField fx:id="rFirstName" maxWidth="-Infinity" minHeight="-Infinity" prefWidth="99999.0"
+                       promptText="Имя">
+                <opaqueInsets>
+                    <Insets/>
+                </opaqueInsets>
+                <VBox.margin>
+                    <Insets/>
+                </VBox.margin>
+            </TextField>
+            <TextFlow fx:id="rFirstNameHelp">
+                <VBox.margin>
+                    <Insets bottom="15.0"/>
+                </VBox.margin>
+            </TextFlow>
+            <TextField fx:id="rMiddleName" maxWidth="-Infinity" minHeight="-Infinity" prefWidth="99999.0"
+                       promptText="Отчество">
+                <opaqueInsets>
+                    <Insets/>
+                </opaqueInsets>
+                <VBox.margin>
+                    <Insets/>
+                </VBox.margin>
+            </TextField>
+            <TextFlow fx:id="rMiddleNameHelp">
+                <VBox.margin>
+                    <Insets bottom="15.0"/>
+                </VBox.margin>
+            </TextFlow>
+            <Button fx:id="regButton" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity"
+                    mnemonicParsing="false" onAction="#onRegister" text="Зарегистрироваться">
+                <VBox.margin>
+                    <Insets bottom="15.0"/>
+                </VBox.margin>
+            </Button>
+        </VBox>
+        <styleClass>
+            <String fx:value="block"/>
+            <String fx:value="bg-gradient"/>
+        </styleClass>
+    </AnchorPane>
+    <stylesheets>
+        <URL value="@../global.css"/>
+        <URL value="@style.css"/>
+
+    </stylesheets>
+</HBox>

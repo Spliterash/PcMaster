@@ -1,0 +1,64 @@
+* {
+    -fx-primary: #fff;
+    -fx-secondary: #e6e6e6;
+    -fx-primarytext: #000000;
+    -selected: #242424;
+    -fx-blue: #1976D2;
+    -fx-red: #FF0000;
+    -fx-color-1: #1976D2;
+}
+
+
+.label, .text-field, .text {
+    -fx-font-smoothing-type: gray;
+    -fx-font-size: 1.2em;
+}
+
+.split-pane > .split-pane-divider {
+    -fx-padding: 2;
+}
+
+.block {
+    -fx-background-radius: 5px;
+    -fx-border-radius: 2px;
+    -fx-border-color: derive(-fx-secondary, -20%);
+}
+
+.no-border-focus:focused {
+    -fx-background-color: -fx-outer-border, -fx-inner-border, -fx-body-color;
+    /*-fx-background-insets: 0, 1, 2;*/
+    /*-fx-background-radius: 5, 4, 3;*/
+}
+
+.text-field {
+    -fx-pref-height: 36;
+}
+
+.button {
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-border-color: derive(-fx-secondary, -20%);
+    -fx-background-color: -fx-secondary;
+    -fx-font-size: 1.2em;
+    -fx-pref-height: 36;
+    -fx-min-height: 36;
+}
+
+.bg-secondary {
+    -fx-background-color: -fx-secondary;
+}
+
+.round {
+    -fx-border-radius: 50;
+    -fx-background-radius: 50;
+}
+
+.p-15 {
+    -fx-padding: 15;
+}
+
+.button:hover {
+    -fx-background-color: derive(-fx-secondary, -40%);
+    -fx-border-color: derive(-fx-secondary, -40%);
+    -fx-cursor: HAND;
+}

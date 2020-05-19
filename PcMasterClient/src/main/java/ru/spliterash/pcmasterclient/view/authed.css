@@ -1,0 +1,39 @@
+.toolbar_box {
+    -fx-background-color: -fx-secondary;
+}
+
+.table-view .column-header,
+.table-view .column-header .filler,
+.table-view .column-header-background .filler {
+    -fx-background-color: -fx-secondary;
+}
+
+.toolbar_button {
+    -fx-background-color: -fx-primary;
+    -fx-padding: 5 5 0;
+    -fx-border-insets: 5 5 0;
+    -fx-background-insets: 5 5 0;
+    -fx-max-width: 99999;
+    -fx-pref-height: 75;
+    -fx-min-height: 75;
+    -fx-content-display: TOP;
+    -fx-text-alignment: center;
+    -fx-border-color: transparent;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.toolbar_button:hover {
+    -fx-background-color: -selected;
+    -fx-text-fill: -fx-primary;
+    -fx-cursor: HAND;
+}
+
+.toolbar_selected {
+    -fx-background-color: derive(-fx-primary,-20%);
+}
+
+
+.toolbar_button:hover .glyph-icon {
+    -fx-fill: -fx-primary;
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<fx:root prefHeight="500.0" prefWidth="710.0" stylesheets="@../../../global.css" type="VBox"
+         fx:controller="ru.spliterash.pcmasterclient.view.user.pages.build.BuildPage"
+         xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="400.0" VBox.vgrow="ALWAYS">
+            <FlowPane fx:id="flow" columnHalignment="CENTER" hgap="25.0" styleClass="no-border-focus" vgap="25.0">
+                <padding>
+                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0"/>
+                </padding>
+            </FlowPane>
+            <VBox.margin>
+                <Insets/>
+            </VBox.margin>
+        </ScrollPane>
+        <HBox alignment="CENTER" spacing="15.0">
+            <children>
+                <Label fx:id="priceLabel" style="-fx-font-size: 20;" text="Цена сборки: очень дорого"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Button cancelButton="true" mnemonicParsing="false" onAction="#resetBuild" text="Сбросить заказ"/>
+                <Button defaultButton="true" mnemonicParsing="false" onAction="#buyBuild" text="Оформить заказ"/>
+            </children>
+            <padding>
+                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0"/>
+            </padding>
+        </HBox>
+    </children>
+</fx:root>

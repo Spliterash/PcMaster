@@ -1,0 +1,35 @@
+.bg-block {
+    -fx-background-color: #5353a5;
+}
+
+.label, .text-field, .text {
+    -fx-text-fill: #f5f2f2;
+}
+
+.bg-gradient {
+    -fx-background-color: linear-gradient(rgb(96, 96, 192), rgb(96, 127, 192));
+}
+.block{
+    -fx-border-color: none;
+}
+
+.button {
+    -fx-background-color: #132440;
+    -fx-border-color: transparent;
+    -fx-text-fill: #d9d9d9;
+    -fx-font-size: 1.2em;
+    -fx-pref-height: 36;
+}
+
+.button:hover {
+    -fx-background-color: #234c7e;
+    -fx-border-color: none;
+}
+
+.background {
+    -fx-background-color: linear-gradient(rgb(25, 42, 75), rgb(29, 25, 75));;
+}
+
+.text-field {
+    -fx-background-color: #425C93;
+}
