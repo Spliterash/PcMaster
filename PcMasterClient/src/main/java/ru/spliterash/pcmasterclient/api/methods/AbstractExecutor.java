@@ -126,11 +126,17 @@ public abstract class AbstractExecutor<Request, Response> {
             if (element.has("error")) {
                 throw gson.fromJson(element, MethodExecuteException.class);
             } else {
-                Response response = getJson(element, gson);
-                //Устанавливаем синхронно, чтобы слушатели не выкинули эксепшн
-                Utils.runSyncAction(() -> cachedResponse.set(response));
-                lastUpdate = System.currentTimeMillis();
-                return response;
+                try {
+                    Response response = getJson(element, gson);    //Устанавливаем синхронно, чтобы слушатели не выкинули эксепшн
+                    Utils.runSyncAction(() -> cachedResponse.set(response));
+                    lastUpdate = System.currentTimeMillis();
+                    return response;
+
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                    return null;
+                }
+
             }
         }
     }

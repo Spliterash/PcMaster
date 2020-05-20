@@ -30,7 +30,9 @@ public class GsonAutoConfiguration {
     @Bean
     @ConditionalOnMissingBean
     public Gson gson(GsonBuilder gsonBuilder) {
-        gsonBuilder.registerTypeAdapter(MethodExecuteException.class, new MethodExecuteExceptionDeserializer());
+        gsonBuilder
+                .setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
+                .registerTypeAdapter(MethodExecuteException.class, new MethodExecuteExceptionDeserializer());
         return gsonBuilder.create();
     }
 

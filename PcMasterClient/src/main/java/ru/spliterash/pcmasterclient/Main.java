@@ -1,6 +1,7 @@
 package ru.spliterash.pcmasterclient;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.sun.javafx.stage.StageHelper;
 import javafx.application.Application;
 import javafx.collections.ObservableList;
@@ -44,7 +45,10 @@ public class Main extends Application {
     private PcMasterUser user;
 
     public Main() {
-        gson = new FxGsonBuilder().acceptNullProperties().create();
+        FxGsonBuilder builder = new FxGsonBuilder();
+        GsonBuilder original = builder.builder();
+        original.setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+        gson = original.create();
     }
 
     public static void main(String[] args) {
@@ -131,7 +135,7 @@ public class Main extends Application {
 
     private void openUrlAsk() {
         Parent root;
-        List<String> urls = Arrays.asList("http://pc.spliterash.ru", "http://localhost");
+        List<String> urls = Arrays.asList("http://spliterash.ru:9631", "http://localhost");
         VBox box = new VBox();
         box.setSpacing(15);
         box.setPadding(new Insets(15));
