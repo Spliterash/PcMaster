@@ -39,7 +39,7 @@ public class RequestManager {
                 .filter(e -> e.getClass().equals(clazz))
                 .map(e -> (T) e)
                 .findFirst()
-                .orElseThrow((() -> new IllegalArgumentException("Impossible")));
+                .orElseThrow((() -> new IllegalArgumentException("Not found")));
     }
 
     public static RequestManager getInstance() {

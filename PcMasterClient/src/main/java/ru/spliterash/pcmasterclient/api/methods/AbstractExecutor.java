@@ -85,14 +85,12 @@ public abstract class AbstractExecutor<Request, Response> {
         }
     }
 
-    public static final String URL = "http://localhost/api/";
-
     public Response execute(Request request) throws IOException, MethodExecuteException {
         System.out.println("Query run in " + Thread.currentThread().getName());
         Main main = Main.getMain();
         Gson gson = main.getGson();
         String token = main.getSettings().getToken();
-        String postUrl = URL + getMethodName();
+        String postUrl = Main.getMain().getSettings().getServerUrl() + "/api/" + getMethodName();
         CloseableHttpClient httpClient = HttpClientBuilder.create().build();
         HttpPost post = new HttpPost(postUrl);
         StringEntity postingString = new StringEntity(gson.toJson(request), StandardCharsets.UTF_8);

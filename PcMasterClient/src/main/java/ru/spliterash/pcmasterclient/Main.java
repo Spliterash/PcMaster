@@ -5,9 +5,14 @@ import com.sun.javafx.stage.StageHelper;
 import javafx.application.Application;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import lombok.Getter;
@@ -21,6 +26,9 @@ import ru.spliterash.pcmasterclient.api.models.PcMasterUser;
 import java.io.*;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 @Getter
 public class Main extends Application {
@@ -115,30 +123,44 @@ public class Main extends Application {
         main = this;
         mainStage = primaryStage;
         loadSettings();
-        loadFonts();
-        update();
+        if (settings.getServerUrl() == null) {
+            openUrlAsk();
+        } else
+            update();
     }
 
-    public File getResourceFile(String path) {
-        URL url = getClass().getClassLoader().getResource(path);
-        if (url == null)
-            return null;
-        File file = null;
-        try {
-            file = new File(url.toURI());
-        } catch (URISyntaxException e) {
-            file = new File(url.getPath());
+    private void openUrlAsk() {
+        Parent root;
+        List<String> urls = Arrays.asList("http://pc.spliterash.ru", "http://localhost");
+        VBox box = new VBox();
+        box.setSpacing(15);
+        box.setPadding(new Insets(15));
+        box.setPrefHeight(250);
+        box.setPrefWidth(250);
+        ObservableList<Node> c = box.getChildren();
+        c.add(new Label("Выберите адрес сервера"));
+        for (String url : urls) {
+            Button button = new Button(url);
+            button.setOnAction(e -> {
+                getSettings().setServerUrl(url);
+                update();
+                c.forEach(n -> n.setDisable(true));
+            });
+            button.setMaxWidth(Double.MAX_VALUE);
+            c.add(button);
         }
-        return file;
+        Scene scene = new Scene(box);
+        mainStage.setScene(scene);
+        mainStage.show();
     }
 
-    private void loadFonts() throws IOException {
+/*    private void loadFonts() throws IOException {
         File f = getResourceFile("fonts");
         for (File file : f.listFiles()) {
             FileInputStream stream = new FileInputStream(file);
             Font.loadFont(stream, 12);
         }
-    }
+    }*/
 
 
     @Override

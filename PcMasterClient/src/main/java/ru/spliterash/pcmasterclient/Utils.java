@@ -17,11 +17,8 @@ import javafx.scene.control.SingleSelectionModel;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import ru.spliterash.pcmasterclient.api.RequestManager;
-import ru.spliterash.pcmasterclient.api.models.ComponentType;
-import ru.spliterash.pcmasterclient.api.models.Supplier;
 import ru.spliterash.pcmasterclient.interfaces.ExceptionSupplier;
 import ru.spliterash.pcmasterclient.interfaces.ServerData;
-import ru.spliterash.pcmasterclient.view.admin.pages.reports.Report;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
