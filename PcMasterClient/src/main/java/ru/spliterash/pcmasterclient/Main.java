@@ -14,26 +14,21 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
-import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import lombok.Getter;
 import lombok.SneakyThrows;
-import net.harawata.appdirs.AppDirsFactory;
 import org.hildan.fxgson.FxGsonBuilder;
 import ru.spliterash.pcmasterclient.api.RequestManager;
 import ru.spliterash.pcmasterclient.api.methods.self.SelfExecutor;
 import ru.spliterash.pcmasterclient.api.models.PcMasterUser;
 
 import java.io.*;
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 @Getter
 public class Main extends Application {
-    public static final File mainFolder = new File(AppDirsFactory.getInstance().getUserDataDir("PcMaster", "1.0", "Spliterash"));
+    public static final File mainFolder = new File("PcMaster");
     private AppSettings settings;
     private File configFile;
     private final Gson gson;

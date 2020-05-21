@@ -15,9 +15,6 @@
             <children>
                 <ImageView fx:id="componentPhoto" fitHeight="110.0" fitWidth="175.0" nodeOrientation="INHERIT"
                            pickOnBounds="true" preserveRatio="true">
-                    <styleClass>
-                        <String fx:value="image-view"/>
-                    </styleClass>
                 </ImageView>
             </children>
         </StackPane>
